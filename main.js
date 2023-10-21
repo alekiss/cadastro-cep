@@ -6,8 +6,8 @@ const bairro = document.querySelector("#neighborhood")
 const cidade = document.querySelector("#city")
 const estado = document.querySelector("#state")
 
-const fetchCep = (cep) => {
-    let url = `https://viacep.com.br/ws/${cep}/json/`
+const fetchCep = () => {
+    let url = `https://viacep.com.br/ws/${cep.value}/json/`
     fetch(url)
         .then(res => res.json())
         .then(dataCep => {
@@ -30,7 +30,7 @@ cep.addEventListener('keyup', () => {
     let cepData = cep.value
   
     if (/\d{8}|\d{5}-?\d{3}/.test(cepData)) {
-      fetchCep(cepData)
+      fetchCep()
     } else {
       showCepError()
     }
