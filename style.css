@@ -1,80 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    background-color: #80deea;
-    font-family: sans-serif;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  main {
-    background-color: #fff;
-    width: 100%;
-  }
-  
-  @media (min-width: 720px) {
-    main {
-      padding: 30px;
-      width: 70%;
-    }
-  }
-  
-  @media (min-width: 1000px) {
-    main {
-      width: 50%;
-    }
-  }
-  
-  main form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  main form .row {
-    width: 100%;
-  }
-  
-  @media (min-width: 570px) {
-    main form .row {
-      width: 90%;
-    }
-  }
-  
-  main form img#loading {
-    position: relative;
-    top: 14px;
-  }
-  
-  main form input {
-    box-sizing: border-box;
-    margin: 10px 0 10px 15%;
-    padding: 10px;
-    width: 70%;
-    outline: none;
-  }
-  
-  main form.loading div:nth-child(n+3) input {
-    background-color: #f9f9f9;
-  }
-  
-  main form .row .cep {
-    display: flex;
-    align-items: center;
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
-  .input-cep-error {
-    border: 1px solid #f00;
-    background: rgba(255, 0, 0, .1);
-  }
-  
-  main form #cepError {
-    color: rgba(255, 0, 0, 0.68);
-    margin-top: -5px;
-    margin: 10px 0 10px 15%;
-    width: 70%;
-  }
+  height: 100%;
+  margin: 0;
+  background-image: url("./background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arimo', sans-serif;
+}
+
+main {
+  width: 50%;
+}
+
+main form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main form .search-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 120px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  width: 100%;
+}
+
+main form .search-container .row {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 100%;
+  margin: auto;
+}
+
+main form .search-container .row h2 {
+  margin: 20px auto;
+}
+
+main form input {
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  height: 60px;
+  width: 90%;
+  background: transparent;
+  font-size: 20px;
+  font-family: 'Arimo', sans-serif;
+}
+
+main form input:focus {
+  background-color: transparent;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.9) inset !important;
+  -webkit-text-fill-color: #000 !important;
+  background-color: transparent !important;
+}
+
+main form .content-container {
+  display: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-top: 10px;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  width: 100%;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+main form .content-container .content {
+  display: flex;
+  padding: 20px;
+  width: 70%;
+}
+
+main form .content-container .content h2{
+  margin: 20px auto;
+}
+
+main form .row .cep {
+  display: flex;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.input-cep-error {
+  border: 1px solid #f00;
+}
+
+main form #cepError {
+  color: rgba(255, 0, 0, 0.68);
+  margin-top: 5px;
+}
